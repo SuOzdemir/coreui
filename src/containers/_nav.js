@@ -3,6 +3,20 @@ import CIcon from '@coreui/icons-react'
 
 const _nav =  [
   {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Definitions']
+  },
+  {
+    _tag: 'CSidebarNavItem',
+    name: 'Books',
+    to: '/books',
+    icon: 'cil-drop',
+  },
+  {
+    _tag: 'CSidebarNavTitle',
+    _children: ['Dashboards']
+  },
+  {
     _tag: 'CSidebarNavItem',
     name: 'Dashboard',
     to: '/dashboard',
