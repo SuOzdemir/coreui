@@ -13,6 +13,12 @@ const _nav =  [
     icon: 'cil-drop',
   },
   {
+    _tag: 'CSidebarNavItem',
+    name: 'Users',
+    to: '/userAdmin',
+    icon: 'cil-drop',
+  },
+  {
     _tag: 'CSidebarNavTitle',
     _children: ['Dashboards']
   },

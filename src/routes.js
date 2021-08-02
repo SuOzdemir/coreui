@@ -39,6 +39,7 @@ const Users = React.lazy(() => import('./views/users/Users'));
 const User = React.lazy(() => import('./views/users/User'));
 
 const BooksPage = React.lazy(() => import('./views/new-pages/books/BooksPage'));
+const UsersPage = React.lazy(() => import('./views/new-pages/userAdmin/UsersPage'));
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -83,6 +84,7 @@ const routes = [
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
 
   { path: '/books', exact: true,  name: 'Books', component: BooksPage },
+  { path: '/userAdmin', exact: true,  name: 'Users', component: UsersPage },
 
 ];
 
