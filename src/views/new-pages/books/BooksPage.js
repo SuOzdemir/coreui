@@ -1,12 +1,10 @@
+import React, {useEffect, useState} from 'react';
+import {InputText} from 'primereact/inputtext';
+import {Dropdown} from 'primereact/dropdown';
+import {Button} from 'primereact/button';
+import {DataTable} from 'primereact/datatable';
 
-import React, { useState ,useEffect} from 'react';
-import { InputText} from 'primereact/inputtext';
-import { InputNumber} from 'primereact/inputnumber';
-import { Dropdown } from 'primereact/dropdown';
-import { Button } from 'primereact/button';
-import { DataTable } from 'primereact/datatable';
-
-import { Column } from 'primereact/column';
+import {Column} from 'primereact/column';
 
 import 'primeflex/primeflex.css';
 import axios from 'axios';
@@ -14,11 +12,6 @@ import "primereact/resources/themes/nova/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
 
-const baseURL="http://localhost:5000/books";
-const getBooksUrl ="/books";
-const addBookUrl ="/book";
-
-//{"bookname","authorname","category"}]
 let booklist=[];
 
 
@@ -77,13 +70,12 @@ export default function BooksPage() {
   //todo 1 ile  2  arasında ne fark var
   /* function  updateBookInput(rowData) { // function 1
        setBookNameInput(rawData.bookname);
-   }*/
   const editBook = (bookRow) => {  // function 2
     console.log(bookRow);
     //todo objeye cevirince->   setProduct({...product});
     setBookNameInput(bookRow.bookname);
-
   }
+   }*/
 
   function resetInput() {
     setBookNameInput("");

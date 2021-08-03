@@ -47,7 +47,8 @@
     "primereact": "^6.5.0",
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
-    "sass": "^1.32.8"
+    "sass": "^1.32.8",
+    "history": "^4.10.1"
   },
   "devDependencies": {
     "@babel/core": "^7.13.14",

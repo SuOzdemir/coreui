@@ -15,8 +15,15 @@ import {
   CRow
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
+import {userKey, historyObj} from "../../../utils/axios-util";
 
 const Login = () => {
+
+  function handleLoginClick() {
+    localStorage.setItem(userKey, JSON.stringify({id: 1}));
+    historyObj.push('/');
+  }
+
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
@@ -46,7 +53,7 @@ const Login = () => {
                     </CInputGroup>
                     <CRow>
                       <CCol xs="6">
-                        <CButton color="primary" className="px-4">Login</CButton>
+                        <CButton color="primary" className="px-4" onClick={handleLoginClick}>Login</CButton>
                       </CCol>
                       <CCol xs="6" className="text-right">
                         <CButton color="link" className="px-0">Forgot password?</CButton>
