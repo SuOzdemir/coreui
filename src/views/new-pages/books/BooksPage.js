@@ -6,11 +6,7 @@ import {DataTable} from 'primereact/datatable';
 
 import {Column} from 'primereact/column';
 
-import 'primeflex/primeflex.css';
 import axios from 'axios';
-import "primereact/resources/themes/nova/theme.css";
-import "primereact/resources/primereact.min.css";
-import "primeicons/primeicons.css";
 
 let booklist=[];
 

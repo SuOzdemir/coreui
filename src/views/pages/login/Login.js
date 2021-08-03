@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, {useRef} from 'react'
+import {Link} from 'react-router-dom'
 import {
   CButton,
   CCard,
@@ -15,18 +15,42 @@ import {
   CRow
 } from '@coreui/react'
 import CIcon from '@coreui/icons-react'
-import {userKey, historyObj} from "../../../utils/axios-util";
+import {historyObj, userKey} from "../../../utils/axios-util";
+import {Toast} from "primereact/toast";
 
 const Login = () => {
+  //const [email, setEmail] = useState('');
+  //const [password, setPassword] = useState('');
 
-  function handleLoginClick() {
-    localStorage.setItem(userKey, JSON.stringify({id: 1}));
+  const toast = useRef(null);
+
+  async function handleLoginClick() {
+    localStorage.setItem(userKey, JSON.stringify({ id: 1}));
     historyObj.push('/');
+    /*
+    await callAPI(callApiPost,
+      'users/authenticate',
+      {email, password},
+      res => {
+        console.log('Login', res.data);
+        if (res.data.user && res.data.access_token) {
+          localStorage.setItem(userKey, JSON.stringify(res.data));
+          setAktifKullanici(res.data);
+          historyObj.push('/');
+        }
+      },
+      true,
+      err => {
+        let hataMesaji = err.response?.data?.message ?? err.message;
+        toast.current.show({ severity: 'error', summary: 'Hata', detail: hataMesaji, life: 3000 });
+      });
+     */
   }
 
   return (
     <div className="c-app c-default-layout flex-row align-items-center">
       <CContainer>
+        <Toast ref={toast}  baseZIndex={1000002} position="bottom-right" />
         <CRow className="justify-content-center">
           <CCol md="8">
             <CCardGroup>

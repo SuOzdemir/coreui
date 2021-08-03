@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
 import {Redirect, Route, Router, Switch} from 'react-router-dom';
-import './scss/style.scss';
 import {historyObj, userKey} from "./utils/axios-util";
+
+import './scss/style.scss';
+import 'primeflex/primeflex.css';
+import "primereact/resources/themes/nova/theme.css";
+import "primereact/resources/primereact.min.css";
+import "primeicons/primeicons.css";
 
 const loading = (
   <div className="pt-3 text-center">
